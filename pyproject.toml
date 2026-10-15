@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phoenix-aisf-lab"
+version = "0.1.0"
+description = "Synthetic Project Phoenix configuration validator"
+requires-python = ">=3.11"
+
+[tool.setuptools]
+py-modules = ["phoenix_config"]
+
+[tool.setuptools.package-dir]
+"" = "src"
