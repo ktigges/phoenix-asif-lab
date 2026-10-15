@@ -16,6 +16,13 @@ class ValidateEnvironmentTests(unittest.TestCase):
         ):
             validate_environment("  ")
 
+    def test_rejects_unsupported_environment(self) -> None:
+        with self.assertRaisesRegex(
+            ValueError,
+            "Unsupported deployment environment",
+        ):
+            validate_environment("qa")
+
 
 if __name__ == "__main__":
     unittest.main()
